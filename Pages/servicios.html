@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Estudio Beltran & Asoc.</title>
+    <link rel="shortcut icon" href="../img/logo.png">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Palette+Mosaic&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+		<section class="caja0">
+			<img src="../img/logo.png" alt="logo" width="100" height="100"> <h1>Beltran & Asoc.</h1>
+		</section>
+		<nav class="menupages">
+			<button class="nav-boton" onclick="accion()">Menú</button>
+			<a href="../index.html" class="nav-enlace desaparece">Inicio</a>
+			<a href="nosotros.html" class="nav-enlace desaparece">Nosotros</a>
+			<a href="noticias.html" class="nav-enlace desaparece">Noticias</a>
+			<a href="servicios.html" class="nav-enlace desaparece">Servicios</a>
+			<a href="contacto.html" class="nav-enlace desaparece">Contacto</a>
+			  </nav>
+    </header>
+
+		<div class="caja2">
+		<h2>Brindamos Soluciones</h2>
+		<p>Brindamos Soluciones a tus problemas legales. Contamos con profesionales que se especializan en diferentes areas, para que así encuentres la mejor solución a tus problemas. Podrás realizar tus consultas, por alguno de los medios habilitados, te contactaremos y evacuaremos tus dudas.</p>
+		</div>
+		<img class="fondoserv" src="../img/servicio.jpg" alt="FondoServicio">
+	<h2>Especialidades</h2>
+	<h3 class="listatitulo">Laboral</h3>
+    <section class="listaserv">
+		<ul>
+			<li>Despidos</li>
+			<li>Trabajo en Negro</li>
+			<li>Diferencias Salariales</li>
+			<li>Reclamo de Horas Extras</li>
+			<li>Accidentes Laborales</li>
+			<li>Enfermedades laborales</li>
+			<li>Discriminación</li>
+			<li>Acoso Laboral</li>
+			<li>Indemnizaciones</li>
+			<li>Mobbing</li>
+			<li>Despido por Embarazo</li>
+			<li>Accidentes de trabajo</li>
+			<li>Enfermedades Profesionales</li>
+			<li>Accidentes In Itinere</li>
+		</ul>
+	</section>
+    <h3 class="listatitulo">Civil</h3>
+    <section class="listaserv">
+		<ul>
+		<li>Alimentos</li>
+		<li>Divorcio</li>
+		<li>Filiacion</li>
+		<li>Cuidado Personal</li>
+		<li>Daños y Perjuicios</li>
+		</ul>
+	</section>
+    <h3 class="listatitulo">Comercial</h3>
+	<section class="listaserv">
+			<ul>
+			<li>COPREC</li>
+			<li>Reclamo de deudas extrajudicial y judicial</li>
+			<li>Concursos</li>
+			<li>Quiebras</li>
+			</ul>	
+	</section>
+    <h3 class="listatitulo">Sucesiones</h3>
+    <section class="listaserv">
+			<ul>
+			<li>Ad Intestato</li>	
+			<li>Testamentaria</li>
+			</ul>
+	</section>
+    <h3 class="listatitulo">Previsional</h3>
+    <section class="listaserv">
+		<ul>
+		<li>Jubilaciones</li>
+		<li>Pensiones</li>
+		<li>PUAM</li>
+		</ul>
+	</section>
+    <footer><!--aun no tengo IG crear uno para el TP-->
+        <p>© 2022 Estudio Beltran & Asoc.</p>
+        <a href="https://wa.me/qr/QMSMB6QX6B7BC1"><i class="fa-brands fa-whatsapp-square"></i></a>
+        <a href="https://www.linkedin.com/in/gustavo-beltran-onorato-15605b144/"><i class="fa-brands fa-linkedin"></i></a>
+        </footer>
+		<script> /*preguntar si se puede usar porque no pude hacerlo de otra forma*/
+            function accion(){
+             var ancla = document.getElementsByClassName('nav-enlace');
+             for(var i = 0; i < ancla.length; i++){
+               ancla[i].classList.toggle('desaparece');
+             }
+            }
+            </script>
+</body>
+</html>

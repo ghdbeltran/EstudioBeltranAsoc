@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudio Beltrán & Asoc</title>
+    <link rel="shortcut icon" href="img/logo.png">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Palette+Mosaic&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+	<header>
+
+    <section class="caja0"> <!--Parte superior-->
+		<img src="./img/logo.png" alt="logo" width="100" height="100"> 
+        <h1>Beltran & Asoc.</h1>
+    </section>
+
+	  <nav class="menupages">
+      <button class="nav-boton" onclick="accion()">Menú</button>
+				<a href="../index.html" class="nav-enlace desaparece">Inicio</a>
+				<a href="Pages/nosotros.html" class="nav-enlace desaparece">Nosotros</a>
+				<a href="Pages/noticias.html" class="nav-enlace desaparece">Noticias</a>
+				<a href="Pages/servicios.html" class="nav-enlace desaparece">Servicios</a>
+				<a href="Pages/contacto.html" class="nav-enlace desaparece">Contacto</a>
+		</nav>
+
+	</header>
+
+
+    <section class="principal">
+        <h2 class="caja1-h2">Nuestro Staff</h2>
+        <div class="caja1-imgp">
+          <div class="imgensfaff">
+            <img src="img/FOTO CV.jpeg" alt="GustavoBeltran" width="150" height="150">
+          </div>
+          <div class="describestaff">
+            <div>Gustavo Beltran</div>
+            <p>Abogado Recibido de la UBA especializado en derecho laboral.</p>
+          </div>
+        </div>
+        <h2 class="caja2-h2">Brindamos Soluciones</h2>
+        <div class="caja2-p">Brindamos Soluciones a tus problemas legales. Contamos con profesionales que se especializan en diferentes areas, para que así encuentres la mejor solución a tus problemas. Podrás realizar tus consultas, por alguno de los medios habilitados, te contactaremos y evacuaremos tus dudas.</div>
+        <div class="caja3">
+          <h2 class="titulocaja3">Noticias</h2>
+          <div class="noticia3">
+            <h3>COVID-19 y licencia por enfermedad: ¿pueden los empleadores exigir trabajo remoto?</h3>
+            <a href="https://abogados.com.ar/covid-19-y-licencia-por-enfermedad-pueden-los-empleadores-exigir-trabajo-remoto/29850">Mas Información</a>
+            <p>El interesante análisis que motiva el presente artículo se inicia con un interrogante. Como es costumbre en el ámbito del derecho, la respuesta al interrogante no es unívoca y requiere de una revisión caso por caso.</p>
+          </div>
+        </div>
+      </section>
+
+ <div class="principal2">
+    <aside class="caja4">
+        <h2>Formulario de Contacto</h2> 
+            <form action="enviar.php" method="post" enctype="application/x-www-form-urlencoded">
+            <fieldset>
+            <legend>Formulario</legend>
+            <label for="">Nombre</label>
+            <input type="text" placeholder="Escribe tu nombre" required>
+            <label for="">Apellido</label>
+            <input type="text" placeholder="Escribe tu apellido">
+            <label for="">DNI</label>
+            <input type="number" placeholder="Escribe tu DNI">
+            <p>Ingresa tu genero</p>
+            <input name="sexo" type="radio">
+            <label for="">Hombre</label>
+            <input name="sexo" type="radio">
+            <label for="">Mujer</label>
+    
+            <input name="sexo" type="radio">
+            <label for="">No Binario</label>
+    
+            <label for="correo">Correo</label>
+            <input type="email" name="correo" placeholder="Escribe tu email">
+      
+            <label for="telefono">Telefono</label>
+            <input type="number" placeholder="Escribe tu telefono">
+    
+            <legend>Asesoramiento</legend>
+            <select name="Asesoramiento" id="">
+            <option value="Laboral">Laboral</option>
+            <option value="Alimentos">Alimentos</option>
+            <option value="Comercial">Comercial</option>
+            <option value="Jubilaciones">Jubilaciones</option>
+            <option value="Sucesiones">Sucesiones</option>
+            <option value="Divorcio">Divorcio</option>
+            <option value="Otro">Otros</option>
+            </select>
+            <label for="Hechos">Comentario</label>
+            <textarea name="comentarios" id="comentario" cols="30" rows="5" placeholder="Comente Brevemente los hechos"></textarea>
+            <input type="checkbox">
+            <label for="">Acepta los terminos y condiciones</label>
+            <input class="botones" type="submit" value="enviar">
+            <input class="botones" type="reset" value="borrar">    
+            </fieldset>
+        </form>
+        </aside>
+        <aside class="caja5">
+            <h2>Ubicación</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.086976682775!2d-58.38842558477041!3d-34.60196208046005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac6f5ed7055%3A0x3256dd279d7f4954!2sPalacio%20de%20Justicia%20de%20la%20Naci%C3%B3n%2C%20Talcahuano%20550%2C%20C1013AAL%20CABA!5e0!3m2!1ses-419!2sar!4v1648132981343!5m2!1ses-419!2sar" width="400" height="300"  aling=right style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </aside>
+    </div>
+ 
+    <footer><!--aun no tengo IG crear uno para el TP-->
+        <p>© 2022 Estudio Beltran & Asoc.</p>
+        <a href="https://wa.me/qr/QMSMB6QX6B7BC1"><i class="fa-brands fa-whatsapp-square"></i></a>
+        <a href="https://www.linkedin.com/in/gustavo-beltran-onorato-15605b144/"><i class="fa-brands fa-linkedin"></i></a>
+        </footer>
+
+<script> /*preguntar si se puede usar porque no pude hacerlo de otra forma*/
+function accion(){
+ var ancla = document.getElementsByClassName('nav-enlace');
+ for(var i = 0; i < ancla.length; i++){
+   ancla[i].classList.toggle('desaparece');
+ }
+}
+</script>
+
+</body>
+</html>

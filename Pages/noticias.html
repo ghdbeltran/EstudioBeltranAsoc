@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros Estudio Beltran & Asoc.</title>
+    <link rel="shortcut icon" href="../img/logo.png">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Palette+Mosaic&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+	    <section class="caja0"> <!--Ver como colocar el logo junto con el titulo h1 a su izquierda-->
+			<img src="../img/logo.png" alt="logo" width="100" height="100"> <h1>Beltran & Asoc.</h1>
+		</section>
+        <nav class="menupages">
+            <button class="nav-boton" onclick="accion()">Menú</button>
+			<a href="../index.html" class="nav-enlace desaparece">Inicio</a>
+			<a href="nosotros.html" class="nav-enlace desaparece">Nosotros</a>
+			<a href="noticias.html" class="nav-enlace desaparece">Noticias</a>
+			<a href="servicios.html" class="nav-enlace desaparece">Servicios</a>
+			<a href="contacto.html" class="nav-enlace desaparece">Contacto</a>
+              </nav>
+    </header>
+
+    <main>
+            <h2 class="noticias">Noticias</h2><!--tiene que estar centrado sobre la nota del día-->
+        <article class="Noticias1"><!--Noticias tiene que ir debajo brindamos soluciones-->
+        <h3>COVID-19 y licencia por enfermedad: ¿pueden los empleadores exigir trabajo remoto?</h3>
+        <a href="https://abogados.com.ar/covid-19-y-licencia-por-enfermedad-pueden-los-empleadores-exigir-trabajo-remoto/29850">Mas Información</a>
+        <p>El interesante análisis que motiva el presente artículo se inicia con un interrogante. Como es costumbre en el ámbito del derecho, la respuesta al interrogante no es unívoca y requiere de una revisión caso por caso.</p>
+        <p>No obstante, en aras a un primer acercamiento hacia la temática de estudio, podemos afirmar a la luz del desarrollo que antecede que:
+        a. El trabajador tiene el irrenunciable derecho de hacer uso de la licencia por enfermedad estatuida en el art. 208 de la LCT siempre y cuando presente una patología.
+        b. Una condición necesaria ‒al margen de que exista una patología‒ es que esta sea impeditiva, es decir, que no permita al empleado ejecutar sus tareas.
+        c. El COVID-19 tiene un sinfín de particularidades, entre ellas, que no necesariamente presenta síntomas y/o que los mismos pueden variar en cuanto a gravedad, dependiendo del caso puntual.
+        d. Teniendo en consideración que, a la fecha de redacción del presente artículo, los casos positivos de COVID-19 han superado los 100 000 diarios, el impacto en las relaciones laborales es indisimulable, especialmente en atención al aislamiento. Por ello, es necesario evaluar con sentido jurídico, pero también práctico, las alternativas para mitigar el impacto que la pandemia continúa ocasionando. 
+        En suma, en la medida que el empleado no presente síntomas, molestias o dolencias impeditivas, el empleador tendría razonables y sólidos argumentos para requerirle la prestación de sus tareas en forma remota, mientras permanece en aislamiento. Desde luego, ello sin vulnerar otras previsiones normativas, por caso, que no tenga lugar un ejercicio abusivo del ius variandi, en torno a las tareas encomendadas.</p>
+    </article>
+    </main>
+    <div class="otrasnoticias">
+    <article class="Noticias2"><!--Noticias tiene que ir debajo brindamos soluciones-->
+        <h3>Nueva ley de Alquileres y cuenta regresiva en el Congreso: qué cambios se estudian y cómo van a impactar en los precios</h3>
+        <a href="https://www.cronista.com/economia-politica/nueva-ley-de-alquileres-cuenta-regresiva-en-el-congreso-que-cambios-se-estudian-y-como-van-a-impactar-en-los-precios/">Mas Información</a>
+        <p>De lo contrario, Juntos por el Cambio insistirá con la derogación del texto que rige desde hace menos de dos años y que para los diferentes actores involucrados fracasó. ¿Cuáles son las propuestas en danza</p>
+    </article>
+
+    <article class="Noticias3"><!--Noticias tiene que ir debajo brindamos soluciones-->
+        <h3>Rechazan el despido dispuesto por desproporcionado</h3>
+        <a href="https://abogados.com.ar/rechazan-el-despido-dispuesto-por-desproporcionado/30228">Mas Información</a>
+        <p>En la causa "C., J. A. c/Consorcio de Propietarios del edificio Florida 1065 Capital s/Despido" la Sala VIII de la Cámara Nacional de Apelaciones del Trabajo confirmó la resolución que acogió la demanda que procuró el cobro de diversos créditos de naturaleza laboral.</p>
+    </article>
+    </div>
+    </main>
+    <footer><!--ver de abregar links con RRSS con logos-->
+        <p>© 2022 Estudio Beltran & Asoc.</p>
+        <a href="https://wa.me/qr/QMSMB6QX6B7BC1"><i class="fa-brands fa-whatsapp-square"></i></a>
+        <a href="https://www.linkedin.com/in/gustavo-beltran-onorato-15605b144/"><i class="fa-brands fa-linkedin"></i></a>
+        </footer>
+
+        <script> /*preguntar si se puede usar porque no pude hacerlo de otra forma*/
+            function accion(){
+             var ancla = document.getElementsByClassName('nav-enlace');
+             for(var i = 0; i < ancla.length; i++){
+               ancla[i].classList.toggle('desaparece');
+             }
+            }
+            </script>
+</body>
+
+</html>
