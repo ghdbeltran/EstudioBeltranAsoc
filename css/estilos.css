@@ -11,7 +11,7 @@ body{
 }
 /*NUEVA ANIMACION DESAFIO*/
 .contactofondo{
-    background-image: linear-gradient(to left #C5CAE9 0%, #2388CB 100%, #144E75 100%);
+    background-image: linear-gradient(to right #C5CAE9 0%, #2388CB 100%, #144E75 100%);
 }
 /*NUEVA ANIMACION DESAFIO*/
 .caja0{
@@ -40,6 +40,7 @@ body{
     font-size: 3em; /*son 50px*/
     padding-left: 250px;
     color: #000000;
+    text-shadow: 5px 5px 5px black; /*MODICACION PARA ANIMACIONES*/
 }
 .caja0 img{
     width: 20%;
@@ -75,6 +76,7 @@ h2{
     font-size: 24px;
     color: #FFFFFF;
     padding-left: 10px;
+    text-shadow: 5px 5px 5px black; /*MODICACION PARA ANIMACIONES*/
 }
 
 /*NUEVO NAV*/
@@ -161,7 +163,7 @@ nav{
   }
   .imgensfaff img{
     object-fit: contain;
-    border-radius: 5em;
+    /*border-radius: 5em;*/
  }
   
   .describestaff { grid-area: describestaff; }
@@ -169,9 +171,8 @@ nav{
   /*flipcard ver si anda*/
 .flip-card {
   background-color: transparent;
-  width: 300px;
-  height: 200px;
-  border: 1px solid #f1f1f1;
+  width: 400px;
+  height: 300px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -205,7 +206,7 @@ nav{
 
 .flip-card-back {
   background-color: dodgerblue;
-  color: white;
+  color: black;
   transform: rotateY(180deg);
 }
 
@@ -319,6 +320,10 @@ main h2{
     text-align: center;
     padding-top: 20px;
     margin-top: 15px;
+}
+.noticias{
+    text-transform: uppercase;
+    text-shadow: 5px 5px 5px black; /*MODICACION PARA ANIMACIONES*/
 }
 .otrasnoticias{
     display: flex;
