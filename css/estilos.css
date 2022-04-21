@@ -9,13 +9,31 @@ body{
     background-image: linear-gradient(to top, #C5CAE9 0%, #2388CB 100%, #144E75 100%);
     font-size: 16px;
 }
-
+/*NUEVA ANIMACION DESAFIO*/
+.contactofondo{
+    background-image: linear-gradient(to left #C5CAE9 0%, #2388CB 100%, #144E75 100%);
+}
+/*NUEVA ANIMACION DESAFIO*/
 .caja0{
     background-color: #303f9f;
     width: 100%;
     height: 80px;
     display:flex;
+    animation-name: inicio; /*NUEVA ANIMACION PARA DESAFIO*/
+    animation-duration: 4s;
+    animation-delay: 0s;
+    position: relative;
 }
+
+@keyframes inicio {
+0%{height: 100vh;}
+25%{height: 75vh;}
+50%{height: 50vh;}
+100%{height: 25vh;}
+}
+/*NUEVA ANIMACION PARA DESAFIO*/
+
+
 .caja0 h1{
     display: flex;
     font-family: 'Lobster', cursive;
@@ -148,6 +166,51 @@ nav{
   
   .describestaff { grid-area: describestaff; }
   
+  /*flipcard ver si anda*/
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/*flipcard ver si anda*/
+
   .caja2-p { grid-area: caja2-p; }
   
   .caja3 {  display: grid;
