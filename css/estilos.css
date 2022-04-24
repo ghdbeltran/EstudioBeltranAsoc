@@ -126,7 +126,7 @@ nav{
     }
 
     /*centro de pagina*/
-
+/*
 .principal {  display: grid;
     grid-template-columns: 0.3fr 1.7fr 1fr 1fr 1.7fr 0.3fr;
     grid-template-rows: 0.3fr 0.5fr 1.5fr 1fr 0.3fr;
@@ -139,9 +139,9 @@ nav{
       ". caja1-imgp caja1-imgp caja2-p caja2-p ."
       ". caja3 caja3 caja3 caja3 ."
       ". . . . . .";
-  }
-  
-  .caja1-h2 { grid-area: caja1-h2; 
+  }    bloqueado para usar bootstrap*/
+  /*
+  .caja1-h2 { grid-area: caja1-h2;
     text-align: center;
 }
   
@@ -163,19 +163,19 @@ nav{
   }
   .imgensfaff img{
     object-fit: contain;
-    /*border-radius: 5em;*/
- }
-  
+    border-radius: 5em;
+ }  bloqueado para usar bootstrap*/
+ /*
   .describestaff { grid-area: describestaff; }
-  
-  /*flipcard ver si anda*/
+    bloqueado para usar bootstrap*/
+
+  /*flipcard*/
 .flip-card {
   background-color: transparent;
   width: 400px;
   height: 300px;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  perspective: 1000px;
 }
-
 
 .flip-card-inner {
   position: relative;
@@ -186,11 +186,9 @@ nav{
   transform-style: preserve-3d;
 }
 
-
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
-
 
 .flip-card-front, .flip-card-back {
   position: absolute;
@@ -200,18 +198,20 @@ nav{
 }
 
 .flip-card-front {
-  background-color: #bbb;
+  /*background-color: #2388CB;*/
+  background-image: linear-gradient(to top, #C5CAE9 0%, #2388CB 100%, #144E75 100%);
   color: black;
 }
 
 .flip-card-back {
-  background-color: dodgerblue;
+  /*background-color: dodgerblue;*/
+  background-image: linear-gradient(to top, #C5CAE9 0%, #2388CB 100%, #144E75 100%);
   color: black;
   transform: rotateY(180deg);
 }
 
 /*flipcard ver si anda*/
-
+/*
   .caja2-p { grid-area: caja2-p; }
   
   .caja3 {  display: grid;
@@ -233,7 +233,7 @@ nav{
   
   .noticia3 { grid-area: noticia3; }
   
-.principal2{ /*contenedor*/
+.principal2{ /*contenedor*//*
     display:flex;
     flex-direction: row;
     justify-content: space-between;
@@ -241,10 +241,10 @@ nav{
 .caja4{
     position: relative;
     width: fit-content;
-    /*justify-content: center;*/
+    /*justify-content: center;*//*
     align-items: center;
     }
-.caja4 h2{
+.caja4 h2{/*
     display: block;
     text-align: left;
 }
@@ -258,7 +258,7 @@ nav{
     padding-bottom: 5px;
     margin-right: 150px;
 }
-
+*/
 
 @media only screen and (min-width: 320px) and (max-width:479px){
     .principal2{
@@ -269,17 +269,17 @@ nav{
 
 /*pie de pagina*/
 footer{
-    width: 100%;
-    height: 25px;
+    /*width: 100%;*/
+    /*height: 25px;*/
     font-size: 20px;
     text-align: right;
     border: 2px solid;
     color: #000000;
-    margin-top: 10px;
-}
+   /* margin-top: 10px;*/
+}/*
 footer p{
     display: inline-block;
-}
+}*/
 
 /*PAGE SERVICIOS*/
 .fondoserv{
