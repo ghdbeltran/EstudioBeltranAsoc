@@ -101,7 +101,7 @@ nav{
 } 
 .nav-boton{
     background-color: #000000;
-    color: #757575;
+    color: white;
     padding: 10px 0;
     border: 2px solid white;
     display: none;
@@ -172,9 +172,9 @@ nav{
   /*flipcard*/
 .flip-card {
   background-color: transparent;
-  width: 400px;
-  height: 300px;
-  perspective: 1000px;
+  width: 18em;
+  height: 18em;
+  perspective: 60em;
 }
 
 .flip-card-inner {
@@ -450,8 +450,8 @@ input[type="radio"]:first-of-type{
 input[type="Submit"], input[type="reset"]{
     padding: .5em 1em; 
     border-radius: 6px;
-    background-color: #333;
-    color: #fff;
+    /*background-color: #333;
+    color: #fff; -- BLOQUEADO PARA USAR BOOTSTRAP BUTTONS*/
     font-family: 'Courier New', Courier, monospace;
     font-size: 0.8em;
 }
