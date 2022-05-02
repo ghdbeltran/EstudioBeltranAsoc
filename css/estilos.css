@@ -1,48 +1,59 @@
-*{
+* {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
 }
+
 /*----------PARTE GENERAL---------------*/
-body{
+body {
     background: #C5CAE9;
     background-image: linear-gradient(to top, #C5CAE9 0%, #2388CB 100%, #144E75 100%);
     font-size: 16px;
 }
-/*NUEVA ANIMACION DESAFIO*/
-.contactofondo{
+
+.contactofondo {
     background-image: linear-gradient(to right #C5CAE9 0%, #2388CB 100%, #144E75 100%);
 }
-/*NUEVA ANIMACION DESAFIO*/
-.caja0{
+
+.caja0 {
     background-color: #303f9f;
     width: 100%;
     height: 80px;
-    display:flex;
-    animation-name: inicio; /*NUEVA ANIMACION PARA DESAFIO*/
+    display: flex;
+    animation-name: inicio;
     animation-duration: 4s;
     animation-delay: 0s;
     position: relative;
 }
 
 @keyframes inicio {
-0%{height: 100vh;}
-25%{height: 75vh;}
-50%{height: 50vh;}
-100%{height: 25vh;}
+    0% {
+        height: 100vh;
+    }
+
+    25% {
+        height: 75vh;
+    }
+
+    50% {
+        height: 50vh;
+    }
+
+    100% {
+        height: 25vh;
+    }
 }
-/*NUEVA ANIMACION PARA DESAFIO*/
 
-
-.caja0 h1{
+.caja0 h1 {
     display: flex;
     font-family: 'Lobster', cursive;
-    font-size: 3em; /*son 50px*/
+    font-size: 3em;
     padding-left: 250px;
     color: #000000;
-    text-shadow: 5px 5px 5px black; /*MODICACION PARA ANIMACIONES*/
+    text-shadow: 5px 5px 5px black;
 }
-.caja0 img{
+
+.caja0 img {
     width: 20%;
     height: 100%;
     margin-left: 10px;
@@ -51,55 +62,57 @@ body{
     *animation-iteration-count: infinite;
     animation-timing-function: ease-in;
     animation-duration: 10s;
-   /* animation-delay: 5s;*/
-    }
-    
-    @keyframes logo_efecto {
+}
+
+@keyframes logo_efecto {
     0% {
-    transform:
-    rotateX(90deg);
+        transform:
+            rotateX(90deg);
     }
 
     50% {
-    transform:
-    rotateX(0deg);
+        transform:
+            rotateX(0deg);
     }
 
     100% {
-    transform:
-    rotateX(-90deg);
+        transform:
+            rotateX(-90deg);
     }
 }
 
 
-h2{
+h2 {
     font-size: 24px;
     color: #FFFFFF;
     padding-left: 10px;
-    text-shadow: 5px 5px 5px black; /*MODICACION PARA ANIMACIONES*/
+    text-shadow: 5px 5px 5px black;
 }
 
-/*NUEVO NAV*/
-.nav-enlace{
+/*NAV*/
+.nav-enlace {
     display: inline-block;
-    color: #757575;
-    text-decoration: none;
+    color: rgb(90, 89, 89);
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
     text-transform: uppercase;
     padding: 15px 20px 10px 20px;
     text-decoration: none;
 }
-.nav-enlace:hover{
-    color: #000000
+
+.nav-enlace:hover {
+    color: #000000;
+    text-decoration: none;
 }
-nav{
+
+nav {
     text-align: center;
     padding-top: 15px;
     display: flex;
     justify-content: space-around;
-} 
-.nav-boton{
+}
+
+.nav-boton {
     background-color: #000000;
     color: white;
     padding: 10px 0;
@@ -109,23 +122,26 @@ nav{
 
 /*media querie nav*/
 
-@media only screen and (min-width: 320px) and (max-width:479px){
-    nav{
+@media only screen and (min-width: 320px) and (max-width:479px) {
+    nav {
         background-color: #000000;
         flex-direction: column;
     }
-    .nav-enlace{
+
+    .nav-enlace {
         border: 2px solid white
     }
-    .nav-boton{
+
+    .nav-boton {
         display: inline-block;
     }
-    .desaparece{
+
+    .desaparece {
         display: none;
     }
-    }
+}
 
-    /*centro de pagina*/
+/*centro de pagina-suspendido para bootstrap*/
 /*
 .principal {  display: grid;
     grid-template-columns: 0.3fr 1.7fr 1fr 1fr 1.7fr 0.3fr;
@@ -140,7 +156,7 @@ nav{
       ". caja3 caja3 caja3 caja3 ."
       ". . . . . .";
   }    bloqueado para usar bootstrap*/
-  /*
+/*
   .caja1-h2 { grid-area: caja1-h2;
     text-align: center;
 }
@@ -165,52 +181,51 @@ nav{
     object-fit: contain;
     border-radius: 5em;
  }  bloqueado para usar bootstrap*/
- /*
+/*
   .describestaff { grid-area: describestaff; }
     bloqueado para usar bootstrap*/
 
-  /*flipcard*/
+/*flipcard*/
 .flip-card {
-  background-color: transparent;
-  width: 18em;
-  height: 18em;
-  perspective: 60em;
+    background-color: transparent;
+    width: 18em;
+    height: 18em;
+    perspective: 60em;
 }
 
 .flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
 }
 
 .flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
 }
 
 .flip-card-front {
-  /*background-color: #2388CB;*/
-  background-image: linear-gradient(to top, #C5CAE9 0%, #2388CB 100%, #144E75 100%);
-  color: black;
+    background-image: linear-gradient(to top, #C5CAE9 0%, #2388CB 100%, #144E75 100%);
+    color: black;
 }
 
 .flip-card-back {
-  /*background-color: dodgerblue;*/
-  background-image: linear-gradient(to top, #C5CAE9 0%, #2388CB 100%, #144E75 100%);
-  color: black;
-  transform: rotateY(180deg);
+    background-image: linear-gradient(to top, #C5CAE9 0%, #2388CB 100%, #144E75 100%);
+    color: black;
+    transform: rotateY(180deg);
 }
 
-/*flipcard ver si anda*/
+/*flipcard*/
 /*
   .caja2-p { grid-area: caja2-p; }
   
@@ -233,7 +248,8 @@ nav{
   
   .noticia3 { grid-area: noticia3; }
   
-.principal2{ /*contenedor*//*
+.principal2{ /*contenedor*/
+/*
     display:flex;
     flex-direction: row;
     justify-content: space-between;
@@ -241,7 +257,8 @@ nav{
 .caja4{
     position: relative;
     width: fit-content;
-    /*justify-content: center;*//*
+    /*justify-content: center;*/
+/*
     align-items: center;
     }
 .caja4 h2{/*
@@ -260,53 +277,56 @@ nav{
 }
 */
 
-@media only screen and (min-width: 320px) and (max-width:479px){
-    .principal2{
-    flex-direction: column;
-    flex-wrap: wrap;
+@media only screen and (min-width: 320px) and (max-width:479px) {
+    .principal2 {
+        flex-direction: column;
+        flex-wrap: wrap;
     }
 }
 
 /*pie de pagina*/
-footer{
-    /*width: 100%;*/
-    /*height: 25px;*/
+footer {
     font-size: 20px;
     text-align: right;
     border: 2px solid;
     color: #000000;
-   /* margin-top: 10px;*/
-}/*
+}
+
+/*
 footer p{
     display: inline-block;
 }*/
 
 /*PAGE SERVICIOS*/
-.fondoserv{
+.fondoserv {
     height: 100vh;
     width: 100%;
-    background-image:url(../img/servicio.jpg);
+    background-image: url(../img/servicio.jpg);
     background-size: cover;
     background-position: center;
 }
-.listaserv{
+
+.listaserv {
     height: auto;
     width: 100%;
     background-color: grey;
     color: white;
     text-align: left;
 }
-.listaserv li{
-    transition: height 1.5s  widht 0.5s;
+
+.listaserv li {
+    transition: height 1.5s widht 0.5s;
 }
-.listaserv li:hover{
+
+.listaserv li:hover {
     height: 50px;
     width: 300px;
     font-size: 25px;
     color: #000000;
     text-align: center;
 }
-.listatitulo{
+
+.listatitulo {
     font-size: 30px;
     background-color: #2388CB;
     color: white;
@@ -314,141 +334,177 @@ footer p{
     text-transform: capitalize;
 }
 
-
 /*PAGE NOTICIAS*/
-main h2{
+main h2 {
     text-align: center;
     padding-top: 20px;
     margin-top: 15px;
 }
-.noticias{
+
+.noticias {
     text-transform: uppercase;
-    text-shadow: 5px 5px 5px black; /*MODICACION PARA ANIMACIONES*/
+    text-shadow: 5px 5px 5px black;
 }
-.otrasnoticias{
+
+.otrasnoticias {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
 }
-.Noticias1{
+
+.Noticias1 {
     width: 100%;
     height: 400px;
     border: 2px solid black;
     padding: 10px;
     margin-top: 25px;
 }
-.Noticias2{
+
+.Noticias2 {
     width: 100%;
     height: 50%;
     border: 2px solid black;
     padding: 10px;
     margin-top: 10px;
 }
-.Noticias3{
+
+.Noticias3 {
     width: 100%;
     height: 50%;
     border: 2px solid black;
     padding: 10px;
     margin-top: 10px;
 }
-.datospersona{
+
+.datospersona {
     width: 250px;
 }
 
 /*media query noticias*/
 
-@media only screen and (min-width: 320px) and (max-width: 767px){
+@media only screen and (min-width: 320px) and (max-width: 767px) {
 
- .caja0 h1{
-    font-size: 1.5em;/*25px*/
-    text-align: center;
-    padding-left: 0;
- }
-.main h2{
-    text-align: center;
-    padding-top: 20px;
-    margin-top: 15px;
-}
-.otrasnoticias{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-}
-.Noticias1{
-    width: auto;
-    height: auto;
-}
-.Noticias2{
-    border: 2px solid black;
-    padding: 10px;
-    margin-top: 10px;
-}
-.Noticias3{
-    border: 2px solid black;
-    padding: 10px;
-    margin-top: 10px;
-}
-.datospersona{
-    width: 250px;
-}
+    .caja0 h1 {
+        font-size: 1.5em;
+        /*25px*/
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .main h2 {
+        text-align: center;
+        padding-top: 20px;
+        margin-top: 15px;
+    }
+
+    .otrasnoticias {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .Noticias1 {
+        width: auto;
+        height: auto;
+    }
+
+    .Noticias2 {
+        border: 2px solid black;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .Noticias3 {
+        border: 2px solid black;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .datospersona {
+        width: 250px;
+    }
 }
 
 /*Formulario*/
-fieldset{
+
+form{
+    background-color: white;
+    background-image: url(/img/justiciatecno.jpg);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    justify-content: center;
+}
+fieldset {
     margin: 2em 0;
     padding: 1em 2em;
     border: solid 3px #ccc;
     border-radius: 6px;
     min-width: 200px;
 }
-legend{
+
+legend {
     font-size: 1.25em;
     padding: 0 0.25em;
     color: #999;
 }
-label{
+
+label {
     display: block;
     margin-top: 1em;
 }
-.checks label{
-    margin-top:  0;
-}
-label:first-of-type{
+
+.checks label {
     margin-top: 0;
 }
-input{
+
+label:first-of-type {
+    margin-top: 0;
+}
+
+input {
     padding: 0.5em;
     border: solid 1px #999;
 }
-input[type="email"], input[type="text"]{
+
+input[type="email"],
+input[type="text"] {
     width: 15em;
 }
-textarea{
+
+textarea {
     min-height: 8em;
     min-width: 100%;
     padding: 0.5em;
     border: solid 1px #999;
 }
-.checks{
+
+.checks {
     margin-bottom: 0;
 }
-input[type="checkbox"] + label, input[type="radio"] + label{
+
+input[type="checkbox"]+label,
+input[type="radio"]+label {
     display: inline-block;
     padding-top: 0;
     margin-top: 0;
 }
-input[type="radio"]{
+
+input[type="radio"] {
     margin-left: 1.5em;
     margin-right: 0;
 }
-input[type="radio"]:first-of-type{
+
+input[type="radio"]:first-of-type {
     margin-left: 0;
 }
-input[type="Submit"], input[type="reset"]{
-    padding: .5em 1em; 
+
+input[type="Submit"],
+input[type="reset"] {
+    padding: .5em 1em;
     border-radius: 6px;
     /*background-color: #333;
     color: #fff; -- BLOQUEADO PARA USAR BOOTSTRAP BUTTONS*/
@@ -457,36 +513,41 @@ input[type="Submit"], input[type="reset"]{
 }
 
 /* PAGE NOSOTROS*/
-.nosotrostitulo1{
+.nosotrostitulo1 {
     text-align: center;
     padding-top: 30px;
     padding-bottom: 30px;
 }
-.nosotrostitulo2{
+
+.nosotrostitulo2 {
     text-align: center;
     padding-top: 30px;
-    padding-bottom: 30px;    
+    padding-bottom: 30px;
 }
-.nosotrosp1 .nosotrosp2{
+
+.nosotrosp1 .nosotrosp2 {
     text-align: justify;
 }
-.nosotroscaja{
+
+.nosotroscaja {
     display: flex;
 }
-.nosotrosp2{
+
+.nosotrosp2 {
     display: inline-block;
     flex-direction: end;
 }
-.nosotrosimg{
+
+.nosotrosimg {
     display: inline-block;
     flex-direction: initial;
 }
 
 /*media queries nosotros*/
-@media only screen and (min-width: 320px) and (max-width: 767px){
-    .nosotroscaja{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .nosotroscaja {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
