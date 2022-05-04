@@ -1,0 +1,560 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+/* Aplicando SASS*/
+$color1: #C5CAE9;
+$color2: #2388CB;
+$color3: #144E75;
+$color4: #303f9f;
+$color5: #000000;
+$color6: #FFFFFF;
+/* Aplicando SASS*/
+
+/*----------PARTE GENERAL---------------*/
+body {
+    background: $color1;
+    background-image: linear-gradient(to top, $color1 0%, $color2 100%, $color3 100%);
+    font-size: 16px;
+}
+
+.contactofondo {
+    background-image: linear-gradient(to right $color1 0%, $color2 100%, $color3 100%);
+}
+
+.caja0 {
+    background-color: $color4;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    animation-name: inicio;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    position: relative;
+}
+
+@keyframes inicio {
+    0% {
+        height: 100vh;
+    }
+
+    25% {
+        height: 75vh;
+    }
+
+    50% {
+        height: 50vh;
+    }
+
+    100% {
+        height: 25vh;
+    }
+}
+
+.caja0 h1 {
+    display: flex;
+    font-family: 'Lobster', cursive;
+    font-size: 3em;
+    padding-left: 250px;
+    color: $color5;
+    text-shadow: 5px 5px 5px $color5;
+}
+
+.caja0 img {
+    width: 20%;
+    height: 100%;
+    margin-left: 10px;
+    object-fit: contain;
+    animation-name: logo_efecto;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 10s;
+}
+
+@keyframes logo_efecto {
+    0% {
+        transform:
+            rotateX(90deg);
+    }
+
+    50% {
+        transform:
+            rotateX(0deg);
+    }
+
+    100% {
+        transform:
+            rotateX(-90deg);
+    }
+}
+
+
+h2 {
+    font-size: 24px;
+    color: $color6;
+    padding-left: 10px;
+    text-shadow: 5px 5px 5px $color5;
+}
+
+/*NAV*/
+.nav-enlace {
+    display: inline-block;
+    color: rgb(90, 89, 89);
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    padding: 15px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.nav-enlace:hover {
+    color: $color5;
+    text-decoration: none;
+}
+
+nav {
+    text-align: center;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-boton {
+    background-color: $color5;
+    color: $color6;
+    padding: 10px 0;
+    border: 2px solid $color6;
+    display: none;
+}
+
+/*media querie nav*/
+
+@media only screen and (min-width: 320px) and (max-width:479px) {
+    nav {
+        background-color: $color5;
+        flex-direction: column;
+    }
+
+    .nav-enlace {
+        border: 2px solid $color6
+    }
+
+    .nav-boton {
+        display: inline-block;
+    }
+
+    .desaparece {
+        display: none;
+    }
+}
+
+/*centro de pagina-suspendido para bootstrap*/
+/*
+.principal {  display: grid;
+    grid-template-columns: 0.3fr 1.7fr 1fr 1fr 1.7fr 0.3fr;
+    grid-template-rows: 0.3fr 0.5fr 1.5fr 1fr 0.3fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    ". . . . . ."
+    ". caja1-h2 caja1-h2 caja2-h2 caja2-h2 ."
+    ". caja1-imgp caja1-imgp caja2-p caja2-p ."
+    ". caja3 caja3 caja3 caja3 ."
+    ". . . . . .";
+}    bloqueado para usar bootstrap*/
+/*
+.caja1-h2 { grid-area: caja1-h2;
+    text-align: center;
+}
+
+.caja2-h2 { grid-area: caja2-h2; }
+
+.caja1-imgp {  display: grid;
+    grid-template-columns: 0.3fr 2.4fr 0.3fr;
+    grid-template-rows: 0.2fr 2fr 0.8fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    ". . ."
+    ". imgensfaff ."
+    ". describestaff .";
+    grid-area: caja1-imgp;
+}
+
+.imgensfaff { grid-area: imgensfaff;
+}
+.imgensfaff img{
+    object-fit: contain;
+    border-radius: 5em;
+}  bloqueado para usar bootstrap*/
+/*
+.describestaff { grid-area: describestaff; }
+    bloqueado para usar bootstrap*/
+
+/*flipcard*/
+.flip-card {
+    background-color: transparent;
+    width: 18em;
+    height: 18em;
+    perspective: 60em;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-image: linear-gradient(to top, $color1 0%, $color2 100%, $color3 100%);
+    color: $color5;
+}
+
+.flip-card-back {
+    background-image: linear-gradient(to top, $color1 0%, $color2 100%, $color3 100%);
+    color: $color5;
+    transform: rotateY(180deg);
+}
+
+/*flipcard*/
+/*
+.caja2-p { grid-area: caja2-p; }
+
+.caja3 {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "titulocaja3 titulocaja3 titulocaja3"
+    "noticia3 noticia3 noticia3"
+    "noticia3 noticia3 noticia3";
+    grid-area: caja3;
+}
+
+.titulocaja3 { grid-area: titulocaja3;
+    text-align: center; 
+    ;
+}
+.noticia3 { grid-area: noticia3; }
+
+.principal2{ /*contenedor*/
+/*
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    }
+.caja4{
+    position: relative;
+    width: fit-content;
+    /*justify-content: center;*/
+/*
+    align-items: center;
+    }
+.caja4 h2{/*
+    display: block;
+    text-align: left;
+}
+.caja5{
+    display: block;
+    text-align: right;
+    flex-direction: start;
+    }
+.caja5 h2{
+    text-align: right;
+    padding-bottom: 5px;
+    margin-right: 150px;
+}
+*/
+
+@media only screen and (min-width: 320px) and (max-width:479px) {
+    .principal2 {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
+/*pie de pagina*/
+footer {
+    font-size: 20px;
+    text-align: right;
+    border: 2px solid;
+    color: $color5;
+}
+
+/*
+footer p{
+    display: inline-block;
+}*/
+
+/*PAGE SERVICIOS*/
+.fondoserv {
+    height: 100vh;
+    width: 100%;
+    background-image: url(../img/servicio.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.listaserv {
+    height: auto;
+    width: 100%;
+    background-color: grey;
+    color: $color6;
+    text-align: left;
+}
+
+.listaserv li {
+    transition: height 1.5s widht 0.5s;
+}
+
+.listaserv li:hover {
+    height: 50px;
+    width: 300px;
+    font-size: 25px;
+    color: $color5;
+    text-align: center;
+}
+
+.listatitulo {
+    font-size: 30px;
+    background-color: #2388CB;
+    color: $color6;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/*PAGE NOTICIAS*/
+main h2 {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 15px;
+}
+
+.noticias {
+    text-transform: uppercase;
+    text-shadow: 5px 5px 5px $color5;
+}
+
+.otrasnoticias {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Noticias1 {
+    width: 100%;
+    height: 400px;
+    border: 2px solid $color5;
+    padding: 10px;
+    margin-top: 25px;
+}
+
+.Noticias2 {
+    width: 100%;
+    height: 50%;
+    border: 2px solid $color5;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.Noticias3 {
+    width: 100%;
+    height: 50%;
+    border: 2px solid $color5;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.datospersona {
+    width: 250px;
+}
+
+/*media query noticias*/
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+
+    .caja0 h1 {
+        font-size: 1.5em;
+        /*25px*/
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .main h2 {
+        text-align: center;
+        padding-top: 20px;
+        margin-top: 15px;
+    }
+
+    .otrasnoticias {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .Noticias1 {
+        width: auto;
+        height: auto;
+    }
+
+    .Noticias2 {
+        border: 2px solid $color5;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .Noticias3 {
+        border: 2px solid $color5;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .datospersona {
+        width: 250px;
+    }
+}
+
+/*Formulario*/
+
+form{
+    background-color: $color6;
+    background-image: url(/img/justiciatecno.jpg);
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    justify-content: center;
+}
+fieldset {
+    margin: 2em 0;
+    padding: 1em 2em;
+    border: solid 3px #ccc;
+    border-radius: 6px;
+    min-width: 200px;
+}
+
+legend {
+    font-size: 1.25em;
+    padding: 0 0.25em;
+    color: #999;
+}
+
+label {
+    display: block;
+    margin-top: 1em;
+}
+
+.checks label {
+    margin-top: 0;
+}
+
+label:first-of-type {
+    margin-top: 0;
+}
+
+input {
+    padding: 0.5em;
+    border: solid 1px #999;
+}
+
+input[type="email"],
+input[type="text"] {
+    width: 15em;
+}
+
+textarea {
+    min-height: 8em;
+    min-width: 100%;
+    padding: 0.5em;
+    border: solid 1px #999;
+}
+
+.checks {
+    margin-bottom: 0;
+}
+
+input[type="checkbox"]+label,
+input[type="radio"]+label {
+    display: inline-block;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+input[type="radio"] {
+    margin-left: 1.5em;
+    margin-right: 0;
+}
+
+input[type="radio"]:first-of-type {
+    margin-left: 0;
+}
+
+input[type="Submit"],
+input[type="reset"] {
+    padding: .5em 1em;
+    border-radius: 6px;
+    /*background-color: #333;
+    color: #fff; -- BLOQUEADO PARA USAR BOOTSTRAP BUTTONS*/
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8em;
+}
+
+/* PAGE NOSOTROS*/
+.nosotrostitulo1 {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.nosotrostitulo2 {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.nosotrosp1 .nosotrosp2 {
+    text-align: justify;
+}
+
+.nosotroscaja {
+    display: flex;
+}
+
+.nosotrosp2 {
+    display: inline-block;
+    flex-direction: end;
+}
+
+.nosotrosimg {
+    display: inline-block;
+    flex-direction: initial;
+}
+
+/*media queries nosotros*/
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .nosotroscaja {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
