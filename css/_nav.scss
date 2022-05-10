@@ -1,0 +1,49 @@
+.nav-enlace {
+    display: inline-block;
+    color: rgb(90, 89, 89);
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    padding: 15px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.nav-enlace:hover {
+    color: $color5;
+    text-decoration: none;
+}
+
+nav {
+    text-align: center;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-boton {
+    background-color: $color5;
+    color: $color6;
+    padding: 10px 0;
+    border: 2px solid $color6;
+    display: none;
+}
+/*media querie nav*/
+
+@media only screen and (min-width: 320px) and (max-width:479px) {
+    nav {
+        background-color: $color5;
+        flex-direction: column;
+    }
+
+    .nav-enlace {
+        border: 2px solid $color6
+    }
+
+    .nav-boton {
+        display: inline-block;
+    }
+
+    .desaparece {
+        display: none;
+    }
+}

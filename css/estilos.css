@@ -20,10 +20,14 @@ body {
   background-image: linear-gradient(to right #C5CAE9 0%, #2388CB 100%, #144E75 100%);
 }
 
+/*SASS II*/
 .caja0 {
   background-color: #303f9f;
   width: 100%;
   height: 80px;
+  height: 80px;
+  width: 100%;
+  background-color: #303f9f;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,7 +134,15 @@ h2 {
   text-shadow: 5px 5px 5px #000000;
 }
 
+/*
+$condicional: colorear;
+
+h2{ 
+    @if $condicional == colorear {
+        color: black}
+}*/
 /*NAV*/
+/*Aplicando SASS*/
 .nav-enlace {
   display: inline-block;
   color: #5a5959;
@@ -184,6 +196,7 @@ nav {
   }
 }
 
+/*Aplicando SASS*/
 /*centro de pagina-suspendido para bootstrap*/
 /*
 .principal {  display: grid;
@@ -359,14 +372,71 @@ footer p{
   background-position: center;
 }
 
+/*
 .listaserv {
+    /*height: auto;
+    width: 100%;
+    background-color: grey;
+    color: $color6;
+    text-align: left;
+}*/
+/*APLICANDO SASS*/
+.listaserv--tex1 {
   height: auto;
   width: 100%;
   background-color: grey;
-  color: #FFFFFF;
+  font-family: "Arial";
+  /*cursive*/
+  color: "Arial";
+  /*$font*/
   text-align: left;
 }
 
+.listaserv--tex2 {
+  height: auto;
+  width: 100%;
+  background-color: grey;
+  font-family: "serif";
+  /*cursive*/
+  color: "serif";
+  /*$font*/
+  text-align: left;
+}
+
+.listaserv--tex3 {
+  height: auto;
+  width: 100%;
+  background-color: grey;
+  font-family: "sans-serif";
+  /*cursive*/
+  color: "sans-serif";
+  /*$font*/
+  text-align: left;
+}
+
+.listaserv--tex4 {
+  height: auto;
+  width: 100%;
+  background-color: grey;
+  font-family: "verdana";
+  /*cursive*/
+  color: "verdana";
+  /*$font*/
+  text-align: left;
+}
+
+.listaserv--tex5 {
+  height: auto;
+  width: 100%;
+  background-color: grey;
+  font-family: "monospace";
+  /*cursive*/
+  color: "monospace";
+  /*$font*/
+  text-align: left;
+}
+
+/*APLICANDO SAS*/
 .listaserv li {
   -webkit-transition: height 1.5s widht 0.5s;
   transition: height 1.5s widht 0.5s;
@@ -426,7 +496,7 @@ main h2 {
   margin-top: 25px;
 }
 
-.Noticias2 {
+.Noticias2, .Noticias3 {
   width: 100%;
   height: 50%;
   border: 2px solid #000000;
@@ -434,14 +504,7 @@ main h2 {
   margin-top: 10px;
 }
 
-.Noticias3 {
-  width: 100%;
-  height: 50%;
-  border: 2px solid #000000;
-  padding: 10px;
-  margin-top: 10px;
-}
-
+/* SASS II*/
 .datospersona {
   width: 250px;
 }
@@ -477,7 +540,7 @@ main h2 {
     width: auto;
     height: auto;
   }
-  .Noticias2 {
+  .Noticias2, .Noticias3 {
     border: 2px solid #000000;
     padding: 10px;
     margin-top: 10px;

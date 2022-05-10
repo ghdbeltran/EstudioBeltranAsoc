@@ -12,6 +12,10 @@ $color5: #000000;
 $color6: #FFFFFF;
 /* Aplicando SASS*/
 
+$var1: 100%;
+$var2: 50%;
+$widht: 100%;
+
 /*----------PARTE GENERAL---------------*/
 body {
     background: $color1;
@@ -22,11 +26,17 @@ body {
 .contactofondo {
     background-image: linear-gradient(to right $color1 0%, $color2 100%, $color3 100%);
 }
-
+/*SASS II*/
+@mixin sizes ($height, $width, $bcolor) {
+	height:$height; 
+	width:$widht;
+	background-color: $bcolor;
+}
 .caja0 {
     background-color: $color4;
-    width: 100%;
+    width: ($var2) + ($var2);
     height: 80px;
+    @include sizes (80px, 100%, $color4);
     display: flex;
     animation-name: inicio;
     animation-duration: 4s;
@@ -62,7 +72,7 @@ body {
 }
 
 .caja0 img {
-    width: 20%;
+    width: ($var1)/5;
     height: 100%;
     margin-left: 10px;
     object-fit: contain;
@@ -97,57 +107,18 @@ h2 {
     text-shadow: 5px 5px 5px $color5;
 }
 
+/*
+$condicional: colorear;
+
+h2{ 
+    @if $condicional == colorear {
+        color: black}
+}*/
+
 /*NAV*/
-.nav-enlace {
-    display: inline-block;
-    color: rgb(90, 89, 89);
-    font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
-    text-transform: uppercase;
-    padding: 15px 20px 10px 20px;
-    text-decoration: none;
-}
-
-.nav-enlace:hover {
-    color: $color5;
-    text-decoration: none;
-}
-
-nav {
-    text-align: center;
-    padding-top: 15px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.nav-boton {
-    background-color: $color5;
-    color: $color6;
-    padding: 10px 0;
-    border: 2px solid $color6;
-    display: none;
-}
-
-/*media querie nav*/
-
-@media only screen and (min-width: 320px) and (max-width:479px) {
-    nav {
-        background-color: $color5;
-        flex-direction: column;
-    }
-
-    .nav-enlace {
-        border: 2px solid $color6
-    }
-
-    .nav-boton {
-        display: inline-block;
-    }
-
-    .desaparece {
-        display: none;
-    }
-}
+/*Aplicando SASS*/
+@import "_nav";
+/*Aplicando SASS*/
 
 /*centro de pagina-suspendido para bootstrap*/
 /*
@@ -312,14 +283,34 @@ footer p{
     background-size: cover;
     background-position: center;
 }
-
+/*
 .listaserv {
-    height: auto;
+    /*height: auto;
     width: 100%;
     background-color: grey;
     color: $color6;
     text-align: left;
+}*/
+/*APLICANDO SASS*/
+$texs: (
+	tex1: black,
+	tex2: blue,
+	tex3: green,
+	tex4: white,
+	tex5: darkblue,
+	);
+
+@each $tex, $font in $texs {
+	.listaserv--#{$tex} {
+	height: auto;
+    width: 100%;
+    background-color: grey;
+    font-family: cursive;
+    color: $font;
+    text-align: left;
+	}
 }
+/*APLICANDO SAS*/
 
 .listaserv li {
     transition: height 1.5s widht 0.5s;
@@ -376,13 +367,9 @@ main h2 {
     padding: 10px;
     margin-top: 10px;
 }
-
+/* SASS II*/
 .Noticias3 {
-    width: 100%;
-    height: 50%;
-    border: 2px solid $color5;
-    padding: 10px;
-    margin-top: 10px;
+        @extend .Noticias2;
 }
 
 .datospersona {
